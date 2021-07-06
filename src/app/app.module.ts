@@ -12,6 +12,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { DetailsComponent } from './components/details/details.component';
 import { GameTabsComponent } from './components/game-tabs/game-tabs.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpErrorsInterceptor } from './Interceptors/http-errors.interceptor';
+import { HttpHeadersInterceptor } from './Interceptors/http-headers.interceptor';
 
 @NgModule({
   declarations: [
@@ -26,9 +29,23 @@ import { GameTabsComponent } from './components/game-tabs/game-tabs.component';
     NoopAnimationsModule,
     AppRoutingModule,
     FormsModule,
-    MatSelectModule
+    MatSelectModule,
+    MatIconModule,
+    MatTabsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpHeadersInterceptor,
+      multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpErrorsInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -33,11 +33,11 @@
 }
 
 .games {
-  // display: flex;
-  // flex-wrap: wrap;
-  // justify-content: center;
-  // max-width: 1200px;
-  // margin: 20px auto;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   max-width: 1200px;
+   margin: 20px auto;
 }
 
 
@@ -45,7 +45,7 @@
  width: 280px;
  margin: 10px;
  height: 330px;
-// overflow: hidden;
+ overflow: hidden;
  border-radius: 5px;
  background-color: #202020;
  box-shadow: 4px 3px 8px 0px rgb(200 152 44 / 22%);
@@ -93,7 +93,7 @@
 }
 
 &-platforms {
-  // display: flex;
+   display: flex;
 }
 
 &-platform {
