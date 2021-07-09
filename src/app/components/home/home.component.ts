@@ -20,10 +20,10 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params: Params) => {
       if(params['game-search']){
-        this.searchGames('-released', params['game-search']);
+        this.searchGames('metac', params['game-search']);
       }
       else{
-        this.searchGames('-released');
+        this.searchGames('metac');
       }
     })
   }

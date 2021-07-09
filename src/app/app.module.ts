@@ -15,6 +15,7 @@ import { GameTabsComponent } from './components/game-tabs/game-tabs.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpErrorsInterceptor } from './Interceptors/http-errors.interceptor';
 import { HttpHeadersInterceptor } from './Interceptors/http-headers.interceptor';
+import { GaugeModule } from 'angular-gauge';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { HttpHeadersInterceptor } from './Interceptors/http-headers.interceptor'
     MatSelectModule,
     MatIconModule,
     MatTabsModule,
-    HttpClientModule
+    HttpClientModule,
+    GaugeModule.forRoot()
   ],
   providers: [
     {
