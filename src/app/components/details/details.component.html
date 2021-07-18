@@ -10,9 +10,9 @@
                     Release: {{game?.released}}
                 </h2>
                 <p class="game-header-genres">
-                    <!-- <span *ngFor="let genre of game?.genres; let last = last">
+                    <span *ngFor="let genre of game?.genres; let last = last">
                         {{ genre.name}} <span *ngIf="!last">,&nbsp;</span>
-                    </span> -->
+                    </span>
                 </p>
                 <div class="game-gauge">
                     <mwl-gauge class="two" [max]="100" [dialStartAngle]="180" [dialEndAngle]="0" [value]="gameRating"
