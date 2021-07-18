@@ -23,7 +23,7 @@
         <div class="game-description">
             <p class="game-name"> {{game.name}} </p>
             <div class="game-platforms">
-                <ng-container *ngFor="let platform of game.parent_platforms">
+                <ng-container *ngFor="let platform of game?.parent_platforms">
                     <img class="game-platform" src="../../../assets/platforms/{{platform.platform.slug}}.svg"
                         alt="slug" />
                 </ng-container>
